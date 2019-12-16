@@ -1,0 +1,38 @@
+go a
+go b
+go c
+go dscr
+go x
+go xx
+go sd
+pognali
+fuck linear(b,c){
+x=(-1*c)/b
+davai(x)
+}
+fuck main(){
+a=1
+b=4
+c=8
+dscr=b*b-4*a*c
+assume(a$0){
+:linear(b,c)
+exit
+}
+assume(dscr<0){
+a=-22
+davai(a)
+exit
+}
+assume(dscr$0){
+x=(-1*b)/(2*a)
+davai(x)
+exit
+}
+sd=sqrt(dscr)
+x=(-1*b-sd)/(2*a)
+davai(x)
+xx=(-1*b+sd)/(2*a)
+davai(xx)
+}
+#

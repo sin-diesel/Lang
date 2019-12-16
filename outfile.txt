@@ -1,0 +1,95 @@
+jmp main
+:linear
+push x
+push -1
+push c
+mul
+push b
+dvd
+pop x
+out x
+ret
+:main
+push a
+push 1
+pop a
+push b
+push 4
+pop b
+push c
+push 8
+pop c
+push dscr
+push b
+push b
+mul
+push 4
+push a
+mul
+push c
+mul
+sub
+pop dscr
+push a
+push 0
+je lab1
+push b
+pop ax
+push c
+pop bx
+call linear
+end
+:lab1
+push dscr
+push 0
+jb lab2
+push a
+push -22
+pop a
+out a
+end
+:lab2
+push dscr
+push 0
+je lab3
+push x
+push -1
+push b
+mul
+push 2
+push a
+mul
+dvd
+pop x
+out x
+end
+:lab3
+push sd
+sqrt dscr
+pop sd
+push x
+push -1
+push b
+mul
+push sd
+sub
+push 2
+push a
+mul
+dvd
+pop x
+out x
+push xx
+push -1
+push b
+mul
+push sd
+add
+push 2
+push a
+mul
+dvd
+pop xx
+out xx
+ret
+end
